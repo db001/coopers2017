@@ -1,0 +1,224 @@
+/*
+$color1: #88958d; //rgba(143, 9, 58, 100)
+$color2: #efefda; //rgba(239, 239, 218, 100)
+$color3: #9dad6f; //rgba(157, 173, 111, 100)
+$color4: #7d6d61; //rgba(125, 109, 97, 100)
+$color5: #5e574d; //rgba(94, 87, 77, 100)
+*/
+
+body {
+    font-family: 'News Cycle', sans-serif;
+    color: #5e574d;
+    background: #efefda;
+}
+.jumbotron {
+    background: #000 url("../pics/cric-cropped.jpg") center center;
+    background-size: cover;
+    color: #7d6d61;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+.navbar {
+    margin-top: 0px;
+    border-radius: 0px;
+    border-width: 0px;
+    background-color: #7d6d61;
+}
+.navbar .container {
+    width: 95%;
+}
+.navbar-brand span {
+    color: #efefda;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.navbar-brand img {
+    height: 25px;
+    width: auto;
+}
+.navbar .nav > li > a {
+    color: #efefda;
+    font-weight: bold;
+}
+#soon {
+    color: #999;
+    pointer-events: none;
+    cursor: default;
+}
+.title span h1 {
+    background: rgba(239, 239, 218, 0.75);
+    padding: 0px 7px;
+    margin: 0px -7px;
+    line-height: 1.5;
+    display: inline-block;
+}
+.title span p {
+    background: rgba(239, 239, 218, 0.75);
+    padding: 0px 5px;
+    margin: 0px -5px;
+    line-height: 1.5;
+    display: inline-block;
+}
+.glyphicon-large {
+    font-size: 50px;
+    color: #9dad6f;
+    margin-top: 10px;
+}
+.intro {
+  margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 1.25em;
+}
+.col-md-3 {
+    margin: 10px 0px;
+}
+.fixtures {
+    color: #5e574d;
+    text-align: center;
+    background-image: url('../pics/woods.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.table {
+    background-color: rgba(239, 239, 218, 0.75);
+}
+.table-bordered {
+    border: 8px;
+}
+th {
+    text-align: center;
+}
+.contact {
+    background-color: rgba(239, 239, 218);
+}
+.contact, .stats {
+    margin: 30px auto;
+    text-align: center;
+    font-size: 1.25em;
+}
+.google-maps {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    width: 65%;
+    margin: auto;
+    margin-top: 25px;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+.stats {
+    background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Cricketscoredcard1b.png/300px-Cricketscoredcard1b.png");
+    /*background-attachment: fixed;*/
+    background-size: cover;
+    padding-top: 20px;
+}
+#oSeasons {
+  text-align: center;
+}
+.stats h4 {
+    text-align: left;
+    font-weight: bolder;
+    text-shadow: 0px 0px 15px #efefda
+}
+.stats p {
+    text-align: left;
+    font-weight: bolder;
+    text-shadow: 0px 0px 15px #efefda
+}
+.stats > .nav {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.stats table {
+    text-align: center;
+    font-size: 0.85em;
+}
+#btn-container {
+    text-align: left;
+    margin: 25px 0;
+}
+#btn-container>.btn {
+    color: #46351d;
+    background-color: #efefda;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+#btn-container>.btn-primary {
+    text-decoration: none;
+    background-color: #46351d;
+    color: #b8afa9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+#btn-container>.nav-pills>li>a, .nav-pills>li>a:hover, .nav-pills>li>a:focus {
+    color: #46351d;
+    background-color: #efefda;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+#batStats>.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    text-decoration: none;
+    background-color: #46351d;
+    color: #b8afa9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+#batStats>.nav-pills>li>a, .nav-pills>li>a:hover, .nav-pills>li>a:focus {
+    color: #46351d;
+    background-color: #efefda;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+#bowlStats>.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    text-decoration: none;
+    background-color: #46351d;
+    color: #b8afa9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+#bowlStats>.nav-pills>li>a, .nav-pills>li>a:hover, .nav-pills>li>a:focus {
+    color: #46351d;
+    background-color: #efefda;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.footer {
+    background-color: #7d6d61;
+    color: #efefda;
+    padding: 1em;
+    margin: 0px;
+}

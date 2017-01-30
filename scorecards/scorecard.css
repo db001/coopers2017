@@ -1,0 +1,16 @@
+body {
+    font-family: 'News Cycle', sans-serif;
+    color: #5e574d;
+    background: #efefda;
+}
+
+.table {
+    background-color: rgba(239, 239, 218, 0.75);
+}
+.table-bordered {
+    border: 10px;
+}
+
+.total {
+  font-weight: bold;
+}

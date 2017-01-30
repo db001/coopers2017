@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cricketApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="The Official (and only) website for Ashridge Coopers CC.  Fixtures and directions to the ground, along with contact info.">
+    <meta name="keywords" content="Ashridge Coopers, Coopers Cricket, Ashridge Business School, Ashridge Coopers Cricket Club">
+    <meta name="robots" content="index, follow">
+
+    <title>Coopers Cricket Club</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="favicoapple-touch-icon" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />-->
+
+</head>
+
+<body>
+
+    <nav id="navbar-main" class="navbar navbar-inverse navbar-top navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./index.html">
+                    <div><img src="http://goo.gl/5HGzvk"><span>Ashridge Coopers CC</span></div>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./index.html#about">About</a></li>
+                    <li><a href="./index.html#fixtures">Fixtures</a></li>
+                    <li><a href="./index.html#contact">Find Us</a></li>
+                    <li><a href="#stats">Stats</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <a name="stats"></a>
+    <div class="stats">
+        <div class="container">
+            <span class="glyphicon glyphicon-stats glyphicon-large" aria-hidden="true"></span>
+            <h3>Player Statistics 2015 Season</h3>
+            <p id="oSeasons">(Other Seasons are coming)</p>
+            <div id="btn-container">
+            <button type="button" id="batBtn" class="btn btn-default btn-primary">Batting</button>
+  <button type="button" id="bowlBtn" class="btn btn-default">Bowling</button>
+</div>
+            <div id="batStats" ng-controller="battingController as batCtrl">
+                <h4>Batting Stats</h4>
+                <p>5 or more innings or 50+ runs</p>
+                <ul class="nav nav-pills" role="tablist">
+                    <li role="presentation" ng-class="{active:isSelected(1)}">
+                        <a ng-click="select(1)" aria-controls="average" role="tab">Average</a></li>
+                    <li role="presentation" ng-class="{active:isSelected(2)}">
+                        <a ng-click="select(2)" aria-controls="runs" role="tab">Runs</a></li>
+                    <!-- <li role="presentation" ng-class="{active:batCtrl.isSelected(3)}">
+      <a ng-click="batCtrl.select(3)" aria-controls="HS" role="tab">High Score</a></li> -->
+      <!-- High score is a string due to Not Outs (eg "104*"), need to find way to filter correctly __DB -->
+                    <li role="presentation" ng-class="{active:isSelected(4)}">
+                        <a ng-click="select(4)" aria-controls="innings" role="tab">Innings</a></li>
+                </ul>
+                <table class="table table-bordered table-striped table-condensed" id="batStats">
+                    <tr>
+                        <th>Name</th>
+                        <th>Innings</th>
+                        <th>Runs</th>
+                        <th>Not Out</th>
+                        <th>Average</th>
+                    </tr>
+                    <tr ng-repeat="batter in bigBatters | orderBy: filtText: true">
+                        <td>{{ batter.Player }}</td>
+                        <td>{{ batter.Inngs }}</td>
+                        <td>{{ batter.Runs }}</td>
+                        <td>{{ batter.NotOut }}</td>
+                        <td>{{ batter.Average }}</td>
+                    </tr>
+                </table>
+
+                <p>Less than 5 innings and 50 runs</p>
+                <table class="table table-bordered table-striped table-condensed" id="batStats">
+                    <tr>
+                        <th>Name</th>
+                        <th>Innings</th>
+                        <th>Runs</th>
+                        <th>Not Out</th>
+                        <th>Average</th>
+                    </tr>
+                    <tr ng-repeat="batter in otherBatters | orderBy: filtText: true">
+                        <td>{{ batter.Player }}</td>
+                        <td>{{ batter.Inngs }}</td>
+                        <td>{{ batter.Runs }}</td>
+                        <td>{{ batter.NotOut }}</td>
+                        <td>{{ batter.Average }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div id="bowlStats" ng-controller="bowlingController as bowlCtrl">
+                <h4>Bowling Stats</h4>
+                <p>10 overs or more bowled</p>
+                <ul class="nav nav-pills" role="tablist">
+                    <li role="presentation" ng-class="{active:isSelected(1)}">
+                        <a ng-click="select(1)" aria-controls="average" role="tab">Average</a></li>
+                    <li role="presentation" ng-class="{active:isSelected(2)}">
+                        <a ng-click="select(2)" aria-controls="overs" role="tab">Overs</a></li>
+                    <li role="presentation" ng-class="{active:isSelected(3)}">
+                        <a ng-click="select(3)" aria-controls="wickets" role="tab">Wickets</a></li>
+                    <li role="presentation" ng-class="{active:isSelected(4)}">
+                        <a ng-click="select(4)" aria-controls="runs" role="tab">Runs</a></li>
+                    <li role="presentation" ng-class="{active:isSelected(5)}">
+                        <a ng-click="select(5)" aria-controls="SR" role="tab">Strike Rate</a></li>
+                </ul>
+                <table class="table table-bordered table-striped table-condensed">
+                    <tr>
+                        <th>Name</th>
+                        <th>Overs</th>
+                        <th>Wickets</th>
+                        <th>Maidens</th>
+                        <th>Runs</th>
+                        <th>Average</th>
+                        <th>Strike Rate</th>
+                    </tr>
+                    <tr ng-repeat="bowler in bigBowlers | orderBy: filtText: orderFilter">
+                        <td>{{ bowler.Player }}</td>
+                        <td>{{ bowler.Overs }}</td>
+                        <td>{{ bowler.Wkts }}</td>
+                        <td>{{ bowler.Maidens }}</td>
+                        <td>{{ bowler.Runs }}</td>
+                        <td>{{ bowler.Average }}</td>
+                        <td>{{ bowler.SR }}</td>
+                    </tr>
+                </table>
+
+                <p>Less than 10 overs bowled</p>
+                <table class="table table-bordered table-striped table-condensed">
+                    <tr>
+                        <th>Name</th>
+                        <th>Overs</th>
+                        <th>Wickets</th>
+                        <th>Maidens</th>
+                        <th>Runs</th>
+                        <th>Average</th>
+                        <th>Strike Rate</th>
+                    </tr>
+                    <tr ng-repeat="bowler in otherBowlers | orderBy: filtText: orderFilter">
+                        <td>{{ bowler.Player }}</td>
+                        <td>{{ bowler.Overs }}</td>
+                        <td>{{ bowler.Wkts }}</td>
+                        <td>{{ bowler.Maidens }}</td>
+                        <td>{{ bowler.Runs }}</td>
+                        <td>{{ bowler.Average }}</td>
+                        <td>{{ bowler.SR }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js'></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/customjs.js"></script>
+
+</body>
+
+</html>
