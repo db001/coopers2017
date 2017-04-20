@@ -194,7 +194,7 @@ app.controller('fixturesController', function($scope) {
 {"Date":1495321200000,"Location":"Away","Opposition":"Chesham Bois","StartTime":"1.00 pm","Result":"","Link":null},
 {"Date":1495926000000,"Location":"Home","Opposition":"BBC Mishits","StartTime":"1.00 pm","Result":"","Link":null},
 {"Date":1496530800000,"Location":"Home","Opposition":"Ivanhoe","StartTime":"1.00 pm","Result":"","Link":null},
-{"Date":1497135600000,"Location":"","Opposition":"TBC","StartTime":"","Result":"","Link":null},
+{"Date":1497135600000,"Location":"Away","Opposition":"Chinnor","StartTime":"1.30pm","Result":"","Link":null},
 {"Date":1497740400000,"Location":"Home","Opposition":"Batchworth","StartTime":"1.00 pm","Result":"","Link":null},
 {"Date":1498345200000,"Location":"Home","Opposition":"Chesham Bois","StartTime":"1.00 pm","Result":"","Link":null},
 {"Date":1498950000000,"Location":"Home","Opposition":"Harrow On The Hill","StartTime":"1.00 pm","Result":"","Link":null},
