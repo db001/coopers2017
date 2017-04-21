@@ -222,3 +222,16 @@ th {
     padding: 1em;
     margin: 0px;
 }
+
+a {
+    font-weight: bolder;
+    color: #efefda;
+}
+a:visited {
+    color: #efefda;    
+}
+a:hover {   
+    
+    text-decoration: none;
+    color: #ffffff;
+}
