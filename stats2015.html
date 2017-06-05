@@ -59,16 +59,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="./index.html">
-                    <div><img src="http://goo.gl/5HGzvk"><span>Ashridge Coopers CC</span></div>
+                <a class="navbar-brand" href="index.html">
+                    <div><img src="./pics/Logopng.png"><span>Ashridge Coopers CC</span></div>
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="./index.html#about">About</a></li>
-                    <li><a href="./index.html#fixtures">Fixtures</a></li>
-                    <li><a href="./index.html#contact">Find Us</a></li>
-                    <li><a href="#stats">Stats</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#fixtures">Fixtures</a></li>
+                    <li><a href="index.html#contact">Find Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Player Stats<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="stats2015.html">2015 Season</a></li>
+                            <li><a href="stats2016.html">2016 Season</a></li>
+                            <!--
+                            <li><a href="#">2014 Season</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">All time</a></li> -->
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -79,7 +91,6 @@
         <div class="container">
             <span class="glyphicon glyphicon-stats glyphicon-large" aria-hidden="true"></span>
             <h3>Player Statistics 2015 Season</h3>
-            <p id="oSeasons">(Other Seasons are coming)</p>
             <div id="btn-container">
             <button type="button" id="batBtn" class="btn btn-default btn-primary">Batting</button>
   <button type="button" id="bowlBtn" class="btn btn-default">Bowling</button>
@@ -202,7 +213,7 @@
     <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js'></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/customjs.js"></script>
+    <script src="js/2015stats.js"></script>
 
 </body>
 
